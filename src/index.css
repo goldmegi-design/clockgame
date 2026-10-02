@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  h1, h2, h3, .font-brick {
+    font-family: 'Black Han Sans', 'Jua', sans-serif;
+  }
+
+  .font-jua {
+    font-family: 'Jua', sans-serif;
+  }
+}
+
+/* Tablet Landscape Optimizations */
+@media (min-width: 768px) and (orientation: landscape) {
+  /* Ensure controls remain accessible within 600px-900px vertical bounds */
+  .tablet-landscape-container {
+    max-height: calc(100vh - 70px);
+  }
+}
+
+/* Custom Sleek Scrollbar for tablet scrolling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(202, 138, 4, 0.5);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(250, 204, 21, 0.8);
+}
+
+/* Roblox Brick 3D Button Effects */
+.brick-btn-yellow {
+  background: #facc15;
+  color: #1e293b;
+  border-bottom: 5px solid #ca8a04;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+}
+.brick-btn-yellow:hover {
+  background: #fde047;
+  transform: translateY(-2px);
+  border-bottom: 7px solid #ca8a04;
+}
+.brick-btn-yellow:active {
+  transform: translateY(3px);
+  border-bottom: 2px solid #ca8a04;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.brick-btn-blue {
+  background: #0284c7;
+  color: #ffffff;
+  border-bottom: 5px solid #0369a1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+}
+.brick-btn-blue:hover {
+  background: #38bdf8;
+  transform: translateY(-2px);
+  border-bottom: 7px solid #0369a1;
+}
+.brick-btn-blue:active {
+  transform: translateY(3px);
+  border-bottom: 2px solid #0369a1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.brick-btn-green {
+  background: #16a34a;
+  color: #ffffff;
+  border-bottom: 5px solid #15803d;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+}
+.brick-btn-green:hover {
+  background: #22c55e;
+  transform: translateY(-2px);
+  border-bottom: 7px solid #15803d;
+}
+.brick-btn-green:active {
+  transform: translateY(3px);
+  border-bottom: 2px solid #15803d;
+}
+
+.brick-btn-red {
+  background: #dc2626;
+  color: #ffffff;
+  border-bottom: 5px solid #b91c1c;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+}
+.brick-btn-red:hover {
+  background: #ef4444;
+  transform: translateY(-2px);
+  border-bottom: 7px solid #b91c1c;
+}
+.brick-btn-red:active {
+  transform: translateY(3px);
+  border-bottom: 2px solid #b91c1c;
+}
+
+/* Roblox Stud Grid Pattern */
+.bg-studs {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.12) 2px, transparent 2.5px);
+  background-size: 24px 24px;
+}
+.bg-studs-dark {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.15) 2px, transparent 2.5px);
+  background-size: 20px 20px;
+}
+
+/* Certificate Print Optimization */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
